@@ -118,7 +118,7 @@ const gameData = [
     { type: "riddle", image: "images/flicker.jpg", question: "Quel est le nom du premier album solo de Niall ?", answer: "Flicker" },
     { type: "riddle", image: "images/mind-of-mine.jpg", question: "Quel est le nom du premier album solo de Zayn ?", answer: "Mind of Mine" },
     { type: "riddle", image: "images/walls.jpg", question: "Quel est le nom du premier album solo de Louis ?", answer: "Walls" },
-    { type: "quiz", image: "images/wmyb-clip.jpg", question: "De quel clip est tirée cette image (Plage) ?", options: ["What Makes You Beautiful", "Live While We're Young", "Kiss You", "Steal My Girl"], answer: "What Makes You Beautiful" }
+    { type: "quiz", image: "images/wmyb-clip.jpg", question: "De quel clip est tirée cette image ?", options: ["What Makes You Beautiful", "Live While We're Young", "Kiss You", "Steal My Girl"], answer: "What Makes You Beautiful" }
 ];
 
 // --- LOGIQUE DU JEU ---
