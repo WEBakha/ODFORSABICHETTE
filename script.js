@@ -44,7 +44,7 @@ const gameData = [
     { type: "quiz", question: "En quelle année est né Niall Horan ?", options: ["1992", "1993", "1994", "1995"], answer: "1993" },
     { type: "quiz", question: "En quelle année est né Harry Styles ?", options: ["1992", "1993", "1994", "1995"], answer: "1994" },
     { type: "quiz", question: "Combien de Brit Awards ont-ils remportés au total ?", options: ["5", "7", "9", "11"], answer: "7" },
-    { type: "quiz", question: "Quelle est la date du '1D Day' (le live de 7h) ?", options: ["23 Juillet 2013", "23 Novembre 2013", "25 Décembre 2014", "1 Janvier 2015"], answer: "23 Novembre 2013" },
+    { type: "quiz", question: "Quelle est la date du '1D Day' ?", options: ["23 Juillet 2013", "23 Novembre 2013", "25 Décembre 2014", "1 Janvier 2015"], answer: "23 Novembre 2013" },
     { type: "quiz", question: "En quelle année est sorti le film 'This Is Us' ?", options: ["2012", "2013", "2014", "2015"], answer: "2013" },
     { type: "quiz", question: "Combien de dates comptait la tournée 'Where We Are Tour' ?", options: ["69", "85", "100", "115"], answer: "69" },
     { type: "quiz", question: "En quel mois est sorti 'Drag Me Down' ?", options: ["Juin 2015", "Juillet 2015", "Août 2015", "Septembre 2015"], answer: "Juillet 2015" },
