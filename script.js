@@ -1,4 +1,4 @@
-let currentLevelIndex = 0;
+let currentLevelIndex = 90;
 let score = 0;
 
 const startBtn = document.getElementById('start-btn');
