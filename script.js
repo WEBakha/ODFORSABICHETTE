@@ -10,7 +10,7 @@ const levelContent = document.getElementById('level-content');
 const gameData = [
     // 🎤 ANECDOTES ET FUN FACTS (1-20)
     { type: "quiz", question: "Quelle est la date et l'heure exactes de la formation du groupe ?", options: ["23 Juillet 2010 à 20h22", "23 Juillet 2011 à 19h00", "15 Août 2010 à 20h22", "25 Mars 2015 à 20h22"], answer: "23 Juillet 2010 à 20h22" },
-    { type: "riddle", question: "Quelle était la phobie étonnante de Liam ?  answer: "cuillère" },
+    { type: "riddle", question: "Quelle était la phobie étonnante de Liam ?  answer: "Cuillère" },
     { type: "riddle", question: "Comment s'appelle le célèbre pigeon de Louis ?", answer: "Kevin" },
     { type: "quiz", question: "Qui aime les filles qui mangent des carottes ?", options: ["Harry", "Liam", "Louis", "Niall"], answer: "Louis" },
     { type: "riddle", question: "Combien de tétons Harry possède-t-il ?", answer: "4" },
