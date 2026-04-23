@@ -1,4 +1,4 @@
-let currentLevelIndex = 1;
+let currentLevelIndex = 0;
 let score = 0;
 
 console.log("Le script charge...");
