@@ -1,21 +1,33 @@
 let currentLevelIndex = 1;
 let score = 0;
 
-const startBtn = document.getElementById('start-btn');
-const startScreen = document.getElementById('start-screen');
-const levelContainer = document.getElementById('level-container');
-const levelContent = document.getElementById('level-content');
+console.log("Le script charge...");
 
-const startBtn = document.getElementById('start-btn');
-const startScreen = document.getElementById('start-screen');
-const levelContainer = document.getElementById('level-container');
+// On attend que TOUTE la page soit prête
+window.onload = function() {
+    console.log("Page chargée !");
 
-function startGame() {
-    console.log("Jeu démarré !");
-    document.getElementById('start-screen').classList.add('hidden');
-    document.getElementById('level-container').classList.remove('hidden');
-    loadLevel();
-}
+    const startBtn = document.getElementById('start-btn');
+    const startScreen = document.getElementById('start-screen');
+    const levelContainer = document.getElementById('level-container');
+
+    if (startBtn) {
+        console.log("Bouton trouvé !");
+        startBtn.addEventListener('click', () => {
+            console.log("Bouton cliqué !");
+            startScreen.classList.add('hidden');
+            levelContainer.classList.remove('hidden');
+            loadLevel();
+        });
+    } else {
+        console.error("ERREUR : Le bouton avec l'id 'start-btn' est introuvable !");
+    }
+};
+
+let currentLevelIndex = 0;
+let score = 0;
+
+// ... (la suite de ton code loadLevel et gameData)
 
 
 // --- LA BASE DE DONNÉES DES 100 QUESTIONS ---
