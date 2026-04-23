@@ -6,6 +6,17 @@ const startScreen = document.getElementById('start-screen');
 const levelContainer = document.getElementById('level-container');
 const levelContent = document.getElementById('level-content');
 
+const startBtn = document.getElementById('start-btn');
+const startScreen = document.getElementById('start-screen');
+const levelContainer = document.getElementById('level-container');
+
+startBtn.addEventListener('click', () => {
+    console.log("Le bouton a été cliqué !"); // Ajoute ça pour tester
+    startScreen.classList.add('hidden');
+    levelContainer.classList.remove('hidden');
+    loadLevel();
+});
+
 // --- LA BASE DE DONNÉES DES 100 QUESTIONS ---
 const gameData = [
     // 🎤 ANECDOTES ET FUN FACTS (1-20)
