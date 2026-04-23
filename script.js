@@ -96,7 +96,7 @@ const gameData = [
     { type: "quiz", question: "Quelle chanson est inspirée par une fan qui leur a jeté une chaussure ?", options: ["Jamais arrivé", "No Control", "Rock Me", "Il n'y a pas de chanson"], answer: "Il n'y a pas de chanson" },
     { type: "riddle", question: "Complète : 'Now I'm climbing the walls, but you don't notice at...'", answer: "all" },
 
-    // 🎧 BLIND TESTS (81-90) - Nécessite des fichiers audio locaux (ex: audio/track1.mp3)
+    // 🎧 BLIND TESTS (81-90)
     { type: "quiz", audio: "audio/wmyb.mp3", question: "Quel est ce hit emblématique ?", options: ["What Makes You Beautiful", "One Thing", "Live While We're Young", "Kiss You"], answer: "What Makes You Beautiful" },
     { type: "quiz", audio: "audio/soml.mp3", question: "Reconnais-tu cette mélodie ?", options: ["Story of My Life", "You & I", "Night Changes", "Steal My Girl"], answer: "Story of My Life" },
     { type: "riddle", audio: "audio/signofthetimes.mp3", question: "Écoute cet extrait solo. Quel est le titre de cette chanson d'Harry ?", answer: "Sign of the times" },
@@ -108,7 +108,7 @@ const gameData = [
     { type: "quiz", audio: "audio/bestsongever.mp3", question: "Quel est ce titre rock/pop ?", options: ["Best Song Ever", "Midnight Memories", "Kiss You", "No Control"], answer: "Best Song Ever" },
     { type: "riddle", audio: "audio/dragmedown.mp3", question: "Écoute cette intro. Quel est le titre ?", answer: "Drag Me Down" },
 
-    // 🖼️ IMAGES ET POCHETTES (91-100) - Nécessite des images locales
+    // 🖼️ IMAGES ET POCHETTES (91-100)
     { type: "quiz", image: "images/up-all-night.jpg", question: "De quel album est cette pochette ?", options: ["Up All Night", "Take Me Home", "Midnight Memories", "Four"], answer: "Up All Night" },
     { type: "quiz", image: "images/take-me-home.jpg", question: "De quel album est cette pochette (Cabine téléphonique) ?", options: ["Take Me Home", "Four", "Up All Night", "Made in the A.M."], answer: "Take Me Home" },
     { type: "quiz", image: "images/midnight-memories.jpg", question: "Sur quelle pochette les voit-on marcher dans la rue la nuit ?", options: ["Midnight Memories", "Four", "Take Me Home", "Up All Night"], answer: "Midnight Memories" },
@@ -209,9 +209,8 @@ function createRiddle(level) {
     
     submitBtn.onclick = () => {
         const val = document.getElementById('riddle-input').value.trim();
-        // On met en minuscule pour éviter les erreurs de casse
         if (val.toLowerCase() === level.answer.toLowerCase()) {
-            score += 15; // Les énigmes rapportent plus !
+            score += 15;
             nextLevel();
         } else {
             alert("Ce n'est pas ça ! Cherche bien 🧐");
@@ -227,31 +226,14 @@ function nextLevel() {
     if (currentLevelIndex < gameData.length) {
         loadLevel();
     } else {
-        levelContent.innerHTML = `
-            <h2>Félicitations ! Tu as terminé le jeu ! 🎉</h2>
-            <p>Ton score final est de : <strong>${score}</strong> points.</p>
-            <p>Tu es officiellement une Directioner Légendaire !</p>
-        `;
-    }
-}
-
-function nextLevel() {
-    currentLevelIndex++;
-    if (currentLevelIndex < gameData.length) {
-        loadLevel();
-    } else {
         showFinalScreen();
     }
 }
 
 function showFinalScreen() {
-    // Demander le pseudo du joueur
     const playerName = prompt("Félicitations ! Entre ton pseudo pour le classement :") || "Anonyme";
-    
-    // Sauvegarder le score
     saveScore(playerName, score);
 
-    // Afficher l'écran de fin avec le classement
     levelContent.innerHTML = `
         <h2>Jeu Terminé ! 🏆</h2>
         <p>Bravo <strong>${playerName}</strong>, ton score est de : <span style="font-size:2rem; color:var(--secondary)">${score}</span></p>
@@ -268,17 +250,10 @@ function showFinalScreen() {
 }
 
 function saveScore(name, finalScore) {
-    // Récupérer les anciens scores ou créer un tableau vide
     let highScores = JSON.parse(localStorage.getItem('1DHighScores')) || [];
-    
-    // Ajouter le nouveau score
     highScores.push({ name: name, score: finalScore });
-    
-    // Trier par score décroissant et ne garder que les 5 meilleurs
     highScores.sort((a, b) => b.score - a.score);
     highScores = highScores.slice(0, 5);
-    
-    // Enregistrer dans le navigateur
     localStorage.setItem('1DHighScores', JSON.stringify(highScores));
 }
 
@@ -292,4 +267,4 @@ function displayLeaderboard() {
                     <span class="points">${entry.score} pts</span>
                 </li>`;
     }).join('');
-} 
+}
