@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OD Pour SABICHETTE</title>
+    <link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+	<link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+
+    <header id="game-header">
+        <div class="logo">Quizz OD </div>
+        <div class="stats">
+            <span>Niveau: <span id="current-level">1</span>/100</span>
+            <span>Score: <span id="score">0</span></span>
+        </div>
+    </header>
+
+    <main id="game-container">
+        
+        <section id="start-screen" class="active">
+            <h1>100 questions en tout genre</h1>
+            <p>Teste tes connaissances sur les OD</p>
+            <button id="start-btn" class="main-button">Commencer le quizz</button>
+        </section>
+
+        <section id="level-container" class="hidden">
+            <div id="level-content">
+                </div>
+        </section>
+
+    </main>
+
+    <footer>
+    <p>Fait par Aka <span class="footer-heart">|</span> Pour ma Sabichette et tester son savoir de folle! </p>
+    <p style="font-size: 0.7rem; margin-top: 5px; opacity: 0.6;">Fait dans un but de diverstissement</p>
+</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
