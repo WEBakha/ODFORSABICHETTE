@@ -10,7 +10,7 @@ const levelContent = document.getElementById('level-content');
 const gameData = [
     // 🎤 ANECDOTES ET FUN FACTS (1-20)
     { type: "quiz", question: "Quelle est la date et l'heure exactes de la formation du groupe ?", options: ["23 Juillet 2010 à 20h22", "23 Juillet 2011 à 19h00", "15 Août 2010 à 20h22", "25 Mars 2015 à 20h22"], answer: "23 Juillet 2010 à 20h22" },
-    { type: "riddle", question: "Quelle était la phobie étonnante de Liam ? (Indice : couvert de table)", answer: "cuillère" },
+    { type: "riddle", question: "Quelle était la phobie étonnante de Liam ?  answer: "cuillère" },
     { type: "riddle", question: "Comment s'appelle le célèbre pigeon de Louis ?", answer: "Kevin" },
     { type: "quiz", question: "Qui aime les filles qui mangent des carottes ?", options: ["Harry", "Liam", "Louis", "Niall"], answer: "Louis" },
     { type: "riddle", question: "Combien de tétons Harry possède-t-il ?", answer: "4" },
@@ -47,10 +47,10 @@ const gameData = [
     { type: "quiz", question: "Quelle est la date du '1D Day' (le live de 7h) ?", options: ["23 Juillet 2013", "23 Novembre 2013", "25 Décembre 2014", "1 Janvier 2015"], answer: "23 Novembre 2013" },
     { type: "quiz", question: "En quelle année est sorti le film 'This Is Us' ?", options: ["2012", "2013", "2014", "2015"], answer: "2013" },
     { type: "quiz", question: "Combien de dates comptait la tournée 'Where We Are Tour' ?", options: ["69", "85", "100", "115"], answer: "69" },
-    { type: "quiz", question: "En quel mois est sorti 'Drag Me Down' (par surprise) ?", options: ["Juin 2015", "Juillet 2015", "Août 2015", "Septembre 2015"], answer: "Juillet 2015" },
+    { type: "quiz", question: "En quel mois est sorti 'Drag Me Down' ?", options: ["Juin 2015", "Juillet 2015", "Août 2015", "Septembre 2015"], answer: "Juillet 2015" },
     { type: "quiz", question: "En quelle année 'What Makes You Beautiful' a-t-il gagné son Brit Award ?", options: ["2011", "2012", "2013", "2014"], answer: "2012" },
     { type: "riddle", question: "Combien de membres comptaient les One Direction à l'origine ?", answer: "5" },
-    { type: "quiz", question: "Combien de mois a duré l'ère X-Factor pour eux (audition à finale) ?", options: ["3 mois", "5 mois", "7 mois", "9 mois"], answer: "5 mois" },
+    { type: "quiz", question: "Combien de mois a duré l'ère X-Factor pour eux ?", options: ["3 mois", "5 mois", "7 mois", "9 mois"], answer: "5 mois" },
 
     // ✒️ TATOUAGES (41-60)
     { type: "quiz", question: "Lequel des garçons n'a AUCUN tatouage ?", options: ["Niall", "Harry", "Zayn", "Liam"], answer: "Niall" },
@@ -70,7 +70,7 @@ const gameData = [
     { type: "quiz", question: "Qui a deux hirondelles tatouées sur le torse ?", options: ["Harry", "Louis", "Zayn", "Liam"], answer: "Harry" },
     { type: "quiz", question: "Qui a un cœur anatomique tatoué ?", options: ["Harry", "Zayn", "Louis", "Liam"], answer: "Harry" },
     { type: "quiz", question: "Qui a 'Oops!' tatoué sur le bras ?", options: ["Louis", "Harry", "Zayn", "Liam"], answer: "Louis" },
-    { type: "quiz", question: "Qui a 'Hi' tatoué sur le bras (souvent associé au précédent) ?", options: ["Harry", "Louis", "Zayn", "Niall"], answer: "Harry" },
+    { type: "quiz", question: "Qui a 'Hi' tatoué sur le bras ?", options: ["Harry", "Louis", "Zayn", "Niall"], answer: "Harry" },
     { type: "quiz", question: "Qui s'est tatoué 'Chillin' avec un palmier ?", options: ["Zayn", "Louis", "Liam", "Harry"], answer: "Zayn" },
     { type: "quiz", question: "Qui a une petite croix sur la main ?", options: ["Harry", "Zayn", "Liam", "Louis"], answer: "Harry" },
 
