@@ -10,12 +10,13 @@ const startBtn = document.getElementById('start-btn');
 const startScreen = document.getElementById('start-screen');
 const levelContainer = document.getElementById('level-container');
 
-startBtn.addEventListener('click', () => {
-    console.log("Le bouton a été cliqué !"); // Ajoute ça pour tester
-    startScreen.classList.add('hidden');
-    levelContainer.classList.remove('hidden');
+function startGame() {
+    console.log("Jeu démarré !");
+    document.getElementById('start-screen').classList.add('hidden');
+    document.getElementById('level-container').classList.remove('hidden');
     loadLevel();
-});
+}
+
 
 // --- LA BASE DE DONNÉES DES 100 QUESTIONS ---
 const gameData = [
